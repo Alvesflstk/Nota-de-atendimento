@@ -1,0 +1,104 @@
+/*COLORS*/
+
+$primaryColor: hsl(25, 97%, 53%);
+$whiteColor:hsl(0, 0%, 100%);
+$LightGrey: hsl(217, 12%, 63%);
+$MediumGrey: hsl(216, 12%, 54%);
+$DarkBlue: hsl(213, 19%, 18%);
+$VeryDarkBlue: hsl(216, 12%, 8%);
+
+@font-face {
+    font-family: 'Overpass';
+    src: url('Fonts/Overpass-VariableFont_wght.ttf') format('truetype');
+}
+
+@mixin centerFlex(){
+   display: grid;
+   place-items: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    @include centerFlex();
+    background-color: $VeryDarkBlue;
+}
+#container-img{
+    
+    background-color:  hsl(212, 17%, 19%);
+    border-radius: 50%;
+    height: 50px;
+    line-height: 40px;  
+    width: 50px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    margin: top 2%;
+}
+img{
+   width: 32px;
+   
+}
+
+ /*ELEMENTO PAI*/
+#container{
+    background-color: $DarkBlue;
+    color: $LightGrey;
+    width: 450px;
+    margin-top: 5%;
+    padding: 50px;
+    border-radius: 20px;
+    font-family: 'Overpass';
+    font-weight: 400;
+    font-size: 15px;
+}
+/*ELEMENTOS FILHOS*/
+#container-title{
+    color: $whiteColor;
+    padding-top: 20px;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+#container-buttons{
+    padding: 20px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+input{
+    background-color: hsl(212, 17%, 19%);
+    height: 50px;
+    line-height: 30px;  
+    width: 50px;
+    border-radius: 50%; 
+    cursor: pointer;
+    border: none;
+    justify-content: space-between;
+    color:$LightGrey ;
+
+    &:hover{
+        background-color: $MediumGrey;
+        color: $whiteColor;
+    }
+}
+
+#Submit{
+    background-color:$primaryColor;
+    color: $whiteColor;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Overpass';
+    font-weight: bold;
+
+    &:hover{
+        background-color: $whiteColor;
+        color: $primaryColor;
+    }
+}
